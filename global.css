@@ -20,5 +20,10 @@ body{
     font-size: 1.4rem;
 }
 
-
+.qualpeso{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    background-color: aqua;
+}
 

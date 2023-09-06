@@ -21,7 +21,10 @@
         <h2>Quanta água quer beber por dia?</h2>
         <input type="number" id="qtdagua"><span>ml</span>
     </div>
-    <button onclick="calcularagua()"><img src="./images/arrow.png" alt="Avançar"></button>
+    <div class="mudarblocodiv">
+        <button onclick="mudarbloco()" id="mudarbloco">Definir quantidade de água manualmente</button>
+    </div>
+    <button onclick="calcularagua()" id="calcularagua"><img src="./images/arrow.png" alt="Avançar"></button>
     <div class="calcularemostrar">
         <p>Você precisa de</p>
         <span id="resultado">0</span>ml
