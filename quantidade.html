@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hidratar</title>
+    <title>Escolher</title>
     <link rel="stylesheet" href="./global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,21 +21,24 @@
         </div>
         
     </div>
-    <div class="quantidadeagua">
+    <div class="quantidadeagua esconderdiv">
         <h2>Quanta água quer beber por dia?</h2>
-        <input type="number" id="qtdagua"><span>ml</span>
+        <div class="qtdaguacompleto">
+            <input type="number" id="qtdagua"><span>ml</span>
+        </div>
+        
     </div>
     <div class="mudarblocodiv">
         <button onclick="mudarbloco()" id="mudarbloco">Definir quantidade de água manualmente</button>
     </div>
-    <button onclick="calcularagua()" id="calcularagua"><img src="./images/arrow.png" alt="Avançar"></button>
+    <button onclick="calcularagua()" id="calcularagua">Avançar</button>
     <div class="calcularemostrar">
         <p>Você precisa de</p>
-        <span id="resultado">0</span>ml
+        <span id="resultado">3000ml</span>
         <p>de água</p>
         <div class="escolha">
-            <button><img src="./images/x.png" alt="cancelar"></button>
-            <button><img src="./images/start.png" alt="aceitar"></button>
+            <button>Cancelar</button>
+            <button>Aceitar</button>
         </div>
     </div>
 </body>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidratar</title>
+    <link rel="stylesheet" href="./global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="controleml">
+        <span id="mlbebido">1500</span>
+        <div class="linha"></div>
+        <span id="mltotal">3000</span>
+    </div>
+    <div class="leftbaragua">
+        <div class="barraesquerda"></div>
+        <img src="./images/water.png" width="15px" alt="agua">
+    </div>
+    <div class="rightbardia">
+        <div class="barradireita"></div>
+        <img src="./images/sol.png" alt="sol">
+    </div>
+    <div class="copoeml">
+        <input type="range" name="rangeml" id="rangeml" min="0" max="1000" step="50" value="0" oninput="mostrarnumero()">
+        <span id="numeromlcopo">0ml</span>
+        <button class="selecionarcopo"><img src="./images/copo.png" alt="selecionar copo"></button>
+        <div class="listacopos">
+            
+        </div>
+    </div>
+    <button id="adicionaragua">Adicionar água</button>
+    <div class="fundo"></div>
+</body>
+</html>

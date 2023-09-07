@@ -3,8 +3,8 @@ body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-color: rgb(26, 20, 37);
-    color: rgb(187, 187, 236);
+    background-color:darkgrey;
+    color: black;
 }
 
 h1, h2, h3, span, p{
@@ -28,12 +28,14 @@ h1, h2, h3, span, p{
     display: flex;
     flex-direction: column;
     width: 60%;
-    background-color: aqua;
+    background-color: white;
+    border: 2px solid blue;
     border-radius: 8px;
     margin: 50px auto;
-    padding: 1.5rem 1.5rem;
+    padding: 1.5rem;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .qualpeso > h2{
@@ -54,4 +56,157 @@ h1, h2, h3, span, p{
     width: 50%;
     height: 1.5rem;
 
+}
+
+.qtdaguacompleto{
+    display: flex;
+    margin: 0 auto;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.quantidadeagua{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    background-color: aqua;
+    border-radius: 8px;
+    margin: 50px auto;
+    padding: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.quantidadeagua > h2{
+    font-size: 2rem;
+    margin: 0 0 1rem 0;
+}
+
+.qtdaguacompleto input{
+    width: 50%;
+    height: 1.5rem;
+}
+
+.esconderdiv{
+    display: none;
+}
+
+.mudarblocodiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    width: 60%;
+    
+}
+
+.mudarblocodiv button{
+    background-color: white;
+    color: rgb(26, 20, 37);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+}
+
+#calcularagua{
+    display:block;
+    background-color: white;
+    color: rgb(26, 20, 37);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-family: 'VT323', monospace;
+    font-size: 2rem;
+    margin: 0 auto;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 3rem;
+}
+
+body{
+    
+    position: relative;
+}
+.calcularemostrar{
+    display: none;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    background-color: brown;
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:  translate(-50%, -50%);
+    border-radius: 8px;
+    padding: 1.5rem;
+    gap: 10px;
+    text-align: center;
+
+}
+
+.calcularemostrar span{
+    color: blue;
+}
+
+.escolha{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem 0;
+}
+
+
+
+.escolha button{
+    border: 2px solid black;
+    border-radius: 16px;
+    padding: 0.5rem 1rem;
+    font-family: 'VT323', monospace;
+    
+}
+
+.controleml{
+    font-size: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem auto;
+    width: fit-content;
+    padding: 2rem 3rem;
+    border-radius: 20rem;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.linha{
+    width: 100%;
+    height: 0.4rem;
+    background-color: black;
+}
+
+.leftbaragua{
+    display: block;
+    flex-direction: column;
+    position: absolute;
+    z-index: 10;
+    top: 1rem;
+    left: 10px;
+    
+}
+
+.barraesquerda{
+    display: flex;
+    height: 60vh;
+    border: 2px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    margin-bottom: 5px;
 }
