@@ -3,7 +3,7 @@ body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-image: linear-gradient(to right, rgba(39, 41, 181, 0.904), rgb(141, 208, 219));
+    background-image: white;
     color: black;
 }
 
@@ -327,4 +327,38 @@ body{
 #onda1{
     z-index: -1;
     position: absolute;
+}
+
+#listacoposmodal{
+    display: none;
+    grid:  repeat(2, 1fr) / repeat(3, 1fr);
+    position: fixed;
+    width: 50%;
+    height: fit-content;
+    justify-content: space-between;
+    left: 50vw;
+    transform: translate(-50%, 0%);
+    gap: 10px;
+    padding: 1rem;
+    background-color: #78b2cc;
+    border-radius: 8px;
+    border: 2px solid black;
+}
+
+#listacoposmodal button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 0.5rem 0.5rem;
+    background-color: white;
+}
+
+#listacoposmodal button img{
+    width: 1rem;
+}
+
+.mostralistacopos{
+    display: grid;
 }
