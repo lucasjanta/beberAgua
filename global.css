@@ -216,6 +216,8 @@ body{
     border-radius: 10px;
     z-index: 10;
     margin-bottom: 5px;
+    position: relative;
+    overflow: hidden;
 }
 
 .rightbardia{
@@ -238,6 +240,25 @@ body{
     border-radius: 10px;
     z-index: 10;
     margin-bottom: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progressoagua, .progressodia{
+    display: flex;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.progressoagua{
+    background-color: blue;
+}
+
+.progressodia{
+    background-color: red;
 }
 
 .copoeml{

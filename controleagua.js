@@ -3,7 +3,28 @@ var totalabeber = document.getElementById('mltotal');
 var numeroml = document.getElementById('numeromlcopo');
 const selecionarcopo = document.querySelector('.selecionarcopo');
 var aguabebida;
+var quantidadeprogressodia;
+var quantidadeprogressoagua;
 const listacoposmodal = document.getElementById('listacoposmodal');
+
+const qtdagua = parseInt(localStorage.getItem('qtdagua'));
+
+const progressoagua = document.querySelector('.progressoagua');
+
+const progressodia = document.querySelector('.progressodia');
+
+//Fazendo a hora em tempo real
+
+/* let dataAtual = new Date();
+let dataFormatada = dataAtual.toLocaleDateString('pt-BR', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+dataFormatada = dataFormatada + ' ' + dataAtual.toLocaleTimeString('pt-BR');
+console.log(dataFormatada);
+let horaAtual = dataAtual.getHours(); */
+
 
 const botaocopo200ml = document.getElementById('200ml');
 const botaocopo250ml = document.getElementById('250ml');
@@ -23,8 +44,10 @@ window.onload = function(){
     }
 
 
-    totalabeber.innerHTML = localStorage.getItem('qtdagua');
+    totalabeber.innerHTML = qtdagua;
     bebido.innerHTML = localStorage.getItem('aguabebida');
+    atualizaragua();
+    atualizardia();
 }
 
 function mostrarnumero(){
@@ -35,9 +58,23 @@ function calcularagua(){
     var novaaguabebida = parseInt(document.getElementById('rangeml').value) + aguabebida;
    localStorage.setItem('aguabebida', novaaguabebida);
    bebido.innerHTML = novaaguabebida;
+   
+   
    window.location.href = "./controleagua.html";
 }
 
+function atualizaragua(){
+    quantidadeprogressoagua = (parseInt(localStorage.getItem('aguabebida')) * 100) / qtdagua;
+    progressoagua.style.height = quantidadeprogressoagua + "%";
+}
+
+function atualizardia(){
+    let dataAtual = new Date();
+    let horario = dataAtual.toLocaleTimeString('pt-BR');
+    horario = parseInt(horario.slice(0, 2));
+    quantidadeprogressodia = (horario * 100) / 24;
+    progressodia.style.height = quantidadeprogressodia + "%";
+}
 
 selecionarcopo.addEventListener('click', ()=>{
     if (listacoposmodal.style.display == "none"){
@@ -111,6 +148,8 @@ botaocopo1000ml.addEventListener('click', ()=>{
     mostrarnumero();
     
 })
+
+
 
 
 
