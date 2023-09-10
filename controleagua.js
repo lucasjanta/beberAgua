@@ -68,6 +68,15 @@ function atualizaragua(){
     progressoagua.style.height = quantidadeprogressoagua + "%";
 }
 
+function removeragua(){
+    var novaaguabebida = aguabebida - parseInt(document.getElementById('rangeml').value);
+    if (novaaguabebida < 0){
+        novaaguabebida = 0;}
+    localStorage.setItem('aguabebida', novaaguabebida);
+    bebido.innerHTML = novaaguabebida;
+    window.location.href = "./controleagua.html";
+}
+
 function atualizardia(){
     let dataAtual = new Date();
     let horario = dataAtual.toLocaleTimeString('pt-BR');
