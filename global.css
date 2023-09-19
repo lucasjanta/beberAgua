@@ -251,12 +251,13 @@ body{
     bottom: 0;
     overflow: hidden;
     z-index: 2;
+    transition: 1s linear all;
 }
 
 .progressoagua{
     background-color: blue;
     border-radius: 8px;
-    transition: 1s linear all;
+    
 }
 
 .progressodia{
@@ -383,7 +384,7 @@ body{
 }
 
 #listacoposmodal button img{
-    width: 1rem;
+    aspect-ratio: 1/1;
 }
 
 .mostralistacopos{
