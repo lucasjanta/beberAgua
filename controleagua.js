@@ -6,6 +6,7 @@ var aguabebida;
 var quantidadeprogressodia;
 var quantidadeprogressoagua;
 const listacoposmodal = document.getElementById('listacoposmodal');
+const fundo = document.querySelector('.fundo');
 
 const qtdagua = parseInt(localStorage.getItem('qtdagua'));
 
@@ -69,6 +70,7 @@ function calcularagua(){
 function atualizaragua(){
     quantidadeprogressoagua = (parseInt(localStorage.getItem('aguabebida')) * 100) / qtdagua;
     progressoagua.style.height = quantidadeprogressoagua + "%";
+    fundo.style.height = quantidadeprogressoagua + "%";
 }
 
 function removeragua(){
@@ -88,6 +90,8 @@ function atualizardia(){
     quantidadeprogressodia = (horario * 100) / 24;
     progressodia.style.height = quantidadeprogressodia + "%";
 }
+
+
 
 selecionarcopo.addEventListener('click', ()=>{
     if (listacoposmodal.style.display == "none"){

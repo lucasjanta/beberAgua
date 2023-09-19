@@ -326,34 +326,6 @@ body{
     text-transform: uppercase;
 }
 
-.fundo{
-    position: fixed;
-    z-index: -1;
-    bottom: 0vh;
-    left: -20%;
-}
-
-#onda3, #onda2, #onda1{
-    display: flex;
-    position: absolute;
-    width: 200vw;
-    overflow: hidden;
-}
-
-#onda3{
-    z-index: -3;
-    position: absolute;
-}
-
-#onda2{
-    z-index: -2;
-    position: absolute;
-}
-
-#onda1{
-    z-index: -1;
-    position: absolute;
-}
 
 #listacoposmodal{
     display: none;
@@ -400,4 +372,81 @@ body{
     background-color: transparent;
     font-size: 1.5rem;
     font-family: 'VT323', monospace;
+}
+
+.fundo{
+    position: fixed;
+    z-index: -1;
+    bottom: 0vh;
+    left: -20%;
+    transition: 1s linear all;
+}
+
+#onda3, #onda2, #onda1{
+    display: flex;
+    position: absolute;
+    width: 200vw;
+    overflow: hidden;
+}
+
+#onda3{
+    z-index: -3;
+    animation: ondafx1 2s ease-out infinite;
+}
+
+#onda2{
+    z-index: -2;
+    animation: ondafx2 2s linear infinite;
+}
+
+#onda1{
+    z-index: -1;
+    animation: ondafx3 2s linear infinite;
+}
+
+.completando{
+    position: relative;
+    bottom: -30vh;
+    width: 200vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: #218cad;
+}
+
+@keyframes ondafx1{
+    0%{
+        transform: translateX(-20%);
+    }
+    50%{
+        transform: translateX(-10%);
+    }
+    100%{
+        transform: translateX(-20%);
+    }
+}
+
+@keyframes ondafx2{
+    0%{
+        transform: translateX(-10%);
+    }
+    50%{
+        transform: translateX(-30%);
+    }
+    100%{
+        transform: translateX(-10%);
+    }
+}
+
+@keyframes ondafx3{
+    0%{
+        transform: translateX(-30%);
+    }
+    50%{
+        transform: translateX(-15%);
+    }
+    100%{
+        transform: translateX(-30%);
+    }
 }
