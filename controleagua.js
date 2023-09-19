@@ -55,12 +55,15 @@ function mostrarnumero(){
 }
 
 function calcularagua(){
-    var novaaguabebida = parseInt(document.getElementById('rangeml').value) + aguabebida;
-   localStorage.setItem('aguabebida', novaaguabebida);
-   bebido.innerHTML = novaaguabebida;
+    var novaaguabebida = parseInt(document.getElementById('rangeml').value) + parseInt(localStorage.getItem('aguabebida'));
+    localStorage.setItem('aguabebida', novaaguabebida);
+    bebido.innerHTML = novaaguabebida;
+    aguabebida = parseInt(localStorage.getItem('aguabebida'));
+    bebido.innerHTML = aguabebida;
+    atualizaragua();
+    atualizardia();
    
-   
-   window.location.href = "./controleagua.html";
+   /* window.location.href = "./controleagua.html"; */
 }
 
 function atualizaragua(){
@@ -69,12 +72,13 @@ function atualizaragua(){
 }
 
 function removeragua(){
-    var novaaguabebida = aguabebida - parseInt(document.getElementById('rangeml').value);
+    var novaaguabebida = parseInt(localStorage.getItem('aguabebida')) - parseInt(document.getElementById('rangeml').value);
     if (novaaguabebida < 0){
         novaaguabebida = 0;}
     localStorage.setItem('aguabebida', novaaguabebida);
     bebido.innerHTML = novaaguabebida;
-    window.location.href = "./controleagua.html";
+    atualizaragua();
+    /* window.location.href = "./controleagua.html"; */
 }
 
 function atualizardia(){
